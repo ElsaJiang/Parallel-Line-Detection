@@ -416,7 +416,7 @@ def process_and_update_frame():
 
             # Draw left line (red)
             if points_L is not None:
-                draw_curve(cropped, points_L, (0, 0, 255), LINE_THICK)
+                draw_curve(cropped, points_L, (255, 0, 0), LINE_THICK)
                 left_curve_full = points_L + np.array([CROP_X, CROP_Y])
 
             # Draw right line (blue)
@@ -430,8 +430,8 @@ def process_and_update_frame():
                 
                 if center_points is not None:
                     # Draw center line on cropped frame
-                    draw_curve(cropped, center_points, (0, 255, 0), LINE_THICK + 1)
-                    draw_direction_arrow(cropped, center_points, (0, 255, 0), thickness=3)
+                    draw_curve(cropped, center_points, (255, 0, 0), LINE_THICK + 1)
+                    draw_direction_arrow(cropped, center_points, (255, 0, 0), thickness=3)
                     
                     # Convert to full frame coordinates
                     center_curve_full = center_points + np.array([CROP_X, CROP_Y])
@@ -441,14 +441,14 @@ def process_and_update_frame():
         
         # Draw curves on main frame
         if left_curve_full is not None:
-            draw_curve(frame, left_curve_full, (0, 0, 255), LINE_THICK)
+            draw_curve(frame, left_curve_full, (255, 0, 0), LINE_THICK)
         
         if right_curve_full is not None:
             draw_curve(frame, right_curve_full, (255, 0, 0), LINE_THICK)
         
         if center_curve_full is not None:
-            draw_curve(frame, center_curve_full, (0, 255, 0), LINE_THICK + 1)
-            draw_direction_arrow(frame, center_curve_full, (0, 255, 0), thickness=4)
+            draw_curve(frame, center_curve_full, (255, 0, 0), LINE_THICK + 1)
+            draw_direction_arrow(frame, center_curve_full, (255, 0, 0), thickness=4)
 
         # Add status text
         status_text = "Detecting: "
