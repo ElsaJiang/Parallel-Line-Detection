@@ -19,10 +19,7 @@ PSEUDOCODE:
 
 4. CALCULATE center line by averaging left and right line points
 
-5. DRAW results:
-   - Red line for left
-   - Blue line for right
-   - Green line for center with forward arrow
+5. DRAW results
 
 6. DISPLAY video in web GUI and accept robot control commands
 """
