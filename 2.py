@@ -1,7 +1,7 @@
 """
 CURVED PARALLEL LINES DETECTION SYSTEM
-Authors: [Your Names Here]
-Date: 2025-02-02
+Authors: Yi Jiang
+Date: 2026-02-02
 
 PSEUDOCODE:
 -----------
